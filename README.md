@@ -17,3 +17,7 @@ This analysis evaluates employee compensation distributions across corporate dep
 * `02_exploratory_analysis.ipynb` - Data discovery and visualization workspace.
 * `Employee_Salary_Analysis_Presentation.pptx` - Corporate presentation slide deck.
 * `output/employee_salary_analysis_v1.xlsx` - Standardised final production dataset.
+
+
+## Sample Visualization
+![Department Distribution Chart](department_distribution.png)
