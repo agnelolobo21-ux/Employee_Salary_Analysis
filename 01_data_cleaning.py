@@ -42,3 +42,5 @@ clean_file_path = "data_clean/employee_salaries_clean.csv"
 df.to_csv(clean_file_path, index=False)
 
 print("\nSuccess! Cleaned dataset saved to data_clean Folder.")
+
+df.to_excel("output/employee_salary_analysis_v1.xlsx", index=False)
