@@ -13,4 +13,3 @@ The dataset contained several intentional data integrity anomalies designed to t
 2. **Text Inconsistencies:** Standardized mixed-case text records across departments (e.g., merging 'sales' vs 'Sales').
 3. **Data Type Corruption:** Transformed text-based `Join_Date` fields into true Datetime objects for temporal metrics.
 4. **Missing Values:** Addressed structural null values within the `Salary` and `Department` fields dynamically.
-5.
