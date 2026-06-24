@@ -13,9 +13,7 @@ df = pd.DataFrame(raw_data)
 
 df.to_csv("data_raw/employee_salaries_raw.csv", index=False)
 
-print("Success! The messy datasethas been saved to data_raw/employee_salaries_raw.csv")
-
-import pandas as pd
+print("Success! The messy dataset has been saved to data_raw/employee_salaries_raw.csv")
 
 file_path = "data_raw/employee_salaries_raw.csv"
 df = pd.read_csv(file_path)
@@ -31,16 +29,16 @@ df.info()
 
 print("\n--- Count of Missing Values ---")
 print(df.isnull().sum())
-
+df['Department'] = df['Department'].str.title()
 df['Department'] = df['Department'].fillna('Unknown')
 median_salary = df['Salary'].median()
 df['Salary'] = df['Salary'].fillna(median_salary)
 print("\n---Missing Values After Cleaning ---")
 print(df.isnull().sum())
 
+df = df.drop_duplicates(subset=['Employee_ID'], keep='first')
+df['Join_Date'] = pd.to_datetime(df['Join_Date'])
 clean_file_path = "data_clean/employee_salaries_clean.csv"
 df.to_csv(clean_file_path, index=False)
 
 print("\nSuccess! Cleaned dataset saved to data_clean Folder.")
-
-df.to_excel("output/employee_salary_analysis_v1.xlsx", index=False)

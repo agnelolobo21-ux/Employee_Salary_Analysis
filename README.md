@@ -1,23 +1,16 @@
-# Employee Salary Analysis 📊
+# 📊 Employee Salary & Demographic Analysis
 
-## 🏢 Project Overview
-This analysis evaluates employee compensation distributions across corporate departments to identify expenditure trends, anomalies, and structural insights. The project assets include core automation scripts, optimized database files, and executive reporting presentations.
+An end-to-end data analytics project focused on auditing, cleaning, and exploring synthetic employee demographic data. This project showcases a production-grade data cleansing pipeline using Python and Pandas to resolve intentional data anomalies embedded in a Google Capstone exercise.
 
-## 💡 Key Analytical Insights
-* **Engineering Department Leadership**: Engineering represents the primary baseline compensation tier, leading the organization with a benchmark average salary of exactly **$105,000**.
-* **Data Integrity & Standardisation**: Cleaned structural null entries, eliminated database anomalies, and applied uniform currency normalization algorithms inside the production tracking layer.
+## 🛠️ Tech Stack & Structure
+* **Language:** Python 3.14
+* **Libraries:** Pandas, NumPy, Matplotlib, Seaborn
+* **Data Flow:** `data_raw/` (Messy source data) ➡️ `01_data_cleaning.py` ➡️ `data_clean/` (Validated destination)
 
-## 🛠️ Data Methodology & Workflow
-1. **Data Ingestion**: Processed raw employee records into Python Pandas dataframes for initial structural cleaning.
-2. **Quality Control**: Handled missing values, formatted currency variables, and verified total mathematical distribution counts.
-3. **Production Output**: Preserved the optimized database file inside the `/output` folder directory for downstream visualization.
-
-## 📁 Repository Structure
-* `01_data_cleaning.py` - Core data cleaning processing layer.
-* `02_exploratory_analysis.ipynb` - Data discovery and visualization workspace.
-* `Employee_Salary_Analysis_Presentation.pptx` - Corporate presentation slide deck.
-* `output/employee_salary_analysis_v1.xlsx` - Standardised final production dataset.
-
-
-## Sample Visualization
-![Department Distribution Chart](department_distribution.png)
+## 🧩 Resolved Data Quality Challenges
+The dataset contained several intentional data integrity anomalies designed to test rigorous extraction and transformation skills:
+1. **Primary Key Duplication:** Resolved duplicate entries under `Employee_ID` (e.g., removing redundant logs for Alice Smith).
+2. **Text Inconsistencies:** Standardized mixed-case text records across departments (e.g., merging 'sales' vs 'Sales').
+3. **Data Type Corruption:** Transformed text-based `Join_Date` fields into true Datetime objects for temporal metrics.
+4. **Missing Values:** Addressed structural null values within the `Salary` and `Department` fields dynamically.
+5.
